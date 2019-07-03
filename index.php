@@ -1,26 +1,21 @@
-<?php
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Crear Archivo ZIP</title>
 
-$zip = new ZipArchive();
-//Nombre del archivo ZIP que se creara
-$archivo = "prueba.zip";
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
 
-if($zip->open($archivo,ZIPARCHIVE::CREATE)==true){
-  //Nombre y ruta del archivo que se agregara al zip
-  $zip->addfile("archivo1.txt");
-  //Nombre y ruta del archivo que se agregara al zip
-  $zip->addfile("archivo2.txt");
-  //Nombre y ruta del archivo que se agregara al zip
-  $zip->addfile("prueba/archivo1.txt");
-  $zip->close();
-  echo "Se ha creado el archivo ".$archivo;
-}else{
-  echo "Se ha presentado un error al crear el archivo ".$archivo;
-}
-
-/*
-NOTA
-
-Verificar que contemos con permisos de escritura dentro de la carpeta que se creara el archivo
-*/
-
-?>
+  <div class="container">
+    <div class="jumbotron mt-4">
+      <h1 class="display-4">Crear archivo ZIP</h1>
+      <a class="btn btn-primary" href="crear_zip.php" role="button">Crear ZIP</a>
+    </div>
+  </div>
+  
+</body>
+</html>
